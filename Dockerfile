@@ -5,29 +5,29 @@ RUN yum clean all -y && yum makecache fast && yum update -y \
  && yum clean all -y \
  && rm -rf /var/cache/yum
 
-ENV JAVA_VERSION 1.8.0_sr6fp20
+ENV JAVA_VERSION 1.8.0_sr6fp26
 
 RUN set -eux; \
     ARCH="$(uname -m)"; \
     case "${ARCH}" in \
       amd64|x86_64) \
-        ESUM='367a777afa71945eeaf623ff4f04d5dcd930eac2c1a234adbba4afe2d88926c1'; \
+        ESUM='c51b7afed4911a4eefdf02c44ee440de726a5a605c5507cc50d4795394b418c2'; \
         YML_FILE='sdk/linux/x86_64/index.yml'; \
         ;; \
       i386) \
-        ESUM='a0e7eb3a68c2883e62b4a34e45c59c3f2880cfe57dbff09484c6b18fc2925e68'; \
+        ESUM='dfe87d34c40cd0c23dc4b7ee47c85f84e26d21ff75476b234998bb9132379659'; \
         YML_FILE='sdk/linux/i386/index.yml'; \
         ;; \
       ppc64el|ppc64le) \
-        ESUM='4a7ac4712548d7630f2471a067406c94c3846fff75a0afc660682129dcf80e5b'; \
+        ESUM='bbc55934ec867290cd9307422beae48e5032dfabb7cb496bed6e47b7ab3f90be'; \
         YML_FILE='sdk/linux/ppc64le/index.yml'; \
         ;; \
       s390) \
-        ESUM='e6b476694cef95a2653a823dc5ed8e662ea08c975fe8564672385b5346ba29fe'; \
+        ESUM='a1ed2722f283a3f3eb0a71f23354b0b4d2761865e759a3bf7f89297e17c20e6f'; \
         YML_FILE='sdk/linux/s390/index.yml'; \
         ;; \
       s390x) \
-        ESUM='17fad00b25231a85d15d681db2329f54d95cab48c1bab6bcd23b6306ad60d785'; \
+        ESUM='c2ddf185daafacd0b50f3e4e593d613b2e9b70d66b88a8da6ee313181376aef6'; \
         YML_FILE='sdk/linux/s390x/index.yml'; \
         ;; \
       *) \
